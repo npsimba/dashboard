@@ -1,38 +1,33 @@
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-import StatsWidget from "../components/StatsWidget";
-import Charts from "../components/Charts";
+import IssuerNavbar from "../components/IssuerNavbar";
 
-const IssuerDashboard = () => {
+function IssuerDashboard() {
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <Sidebar />
-      
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
-        {/* Navbar */}
-        <Navbar />
-        
-        {/* Dashboard Content */}
-        <div className="p-6 bg-gray-100 flex-1">
-          <h1 className="text-2xl font-bold">Issuer Dashboard</h1>
-          <p className="text-gray-600">Track the certificates you have issued.</p>
+    <div className="h-screen bg-gray-100">
+      {/* Issuer Navbar */}
+      <IssuerNavbar />
 
-          {/* Stats Widgets Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <StatsWidget title="Total Certificates Issued" count={50} />
-            <StatsWidget title="Categories Tracked" count={5} />
+      {/* Dashboard Content */}
+      <div className="p-6">
+        <h2 className="text-xl font-semibold">Track the certificates you have issued.</h2>
+
+        <div className="grid grid-cols-2 gap-6 mt-6">
+          {/* Issued Certificates */}
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-semibold">Certificates Issued</h3>
+            <p className="text-3xl font-bold">200</p>
           </div>
-          
-          {/* Charts Section */}
-          <div className="mt-6"> 
-            <Charts />
+
+          {/* Pending Approvals */}
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-semibold">Pending Approvals</h3>
+            <p className="text-3xl font-bold">10</p>
           </div>
+
+          {/* Add Charts & More Features Here */}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default IssuerDashboard;

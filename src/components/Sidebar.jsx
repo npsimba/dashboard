@@ -17,16 +17,16 @@ const Sidebar = () => {
         <span className="text-xl font-bold">{isOpen ? "Certificate Dashboard" : "CD"}</span>
       </div>
       <nav className="space-y-4 flex-1">
-        <Link to="/dashboard" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
+        <Link to="/user/dashboard" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
           <LayoutDashboard size={20} /> {isOpen && "Dashboard"}
         </Link>
-        <Link to="/certificates" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
+        <Link to="/user/certificates" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
           <FileText size={20} /> {isOpen && "Certificates"}
         </Link>
-        <Link to="/analytics" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
+        <Link to="/user/analytics" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
           <BarChart3 size={20} /> {isOpen && "Analytics"}
         </Link>
-        <Link to="/settings" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
+        <Link to="/user/settings" className="flex items-center gap-4 p-3 hover:bg-gray-800 rounded-lg">
           <Settings size={20} /> {isOpen && "Settings"}
         </Link>
       </nav>
